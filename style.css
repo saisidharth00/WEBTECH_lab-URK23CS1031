@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #a08f5f;
+    color: white;
+}
+
+header .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header .search-box input {
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 30px;
+    background: #f1f1f1;
+}
+
+.welcome h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1;
+    min-width: 250px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Content Sections */
+.content {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-block img {
+    width: 20%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.content-block p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #a08f5f;
+    color: white;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .content-block {
+        flex-direction: column;
+    }
+    .content-block.reverse {
+        flex-direction: column;
+    }
+}
